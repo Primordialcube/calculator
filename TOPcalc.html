@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="TOPcalc.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="TOPcalc.css" />
     <title>Calculator</title>
-</head>
-<body>
-    <div class="container">
-        <div class="para">
-            <p>Calculator X9000</p>
-        </div>
-        <div class="dis">
-            <input type="text" readonly="readonly" class="display">
-        </div>
-        <div class="buttons">
-            <button class="num">1</button>
-            <button class="num">2</button>
-            <button class="num">3</button>
-            <button class="num">4</button>
-            <button class="num">5</button>
-            <button class="num">6</button>
-            <button class="num">7</button>
-            <button class="num">8</button>
-            <button class="num">9</button>
-            <button class="plus">+</button>
-            <button class="minus">-</button>
-            <button class="multi">*</button>
-            <button class="divi">/</button>
-            <button class="equal">=</button>
-            <button class="delete">DEL</button>
-            <button class="clear">C</button>
-        </div>
+  </head>
+  <body>
+    <div id="container">
+      <div id="para">
+        <p>Calculator X9000</p>
+      </div>
+      <div id="dis">
+        <input id="display" readonly/>
+      </div>
+      <div id="buttons">
+        <button id="num0" value="0" onclick="appendDisplay('0')">0</button>
+        <button id="num1" value="1" onclick="appendDisplay('1')">1</button>
+        <button id="num2" value="2" onclick="appendDisplay('2')">2</button>
+        <button id="op" onclick="appendDisplay('+')">+</button>
+        <button id="num3" value="3" onclick="appendDisplay('3')">3</button>
+        <button id="num4" value="4" onclick="appendDisplay('4')">4</button>
+        <button id="num5" value="5" onclick="appendDisplay('5')">5</button>
+        <button id="op" onclick="appendDisplay('-')">-</button>
+        <button id="num6" value="6" onclick="appendDisplay('6')">6</button>
+        <button id="num7" value="7" onclick="appendDisplay('7')">7</button>
+        <button id="num8" value="8" onclick="appendDisplay('8')">8</button>
+        <button id="op" onclick="appendDisplay('*')">*</button>
+        <button id="num9" value="9" onclick="appendDisplay('9')">9</button>
+        <button onclick="deleteStuff()">DEL</button>
+        <button onclick="clearDisplay()">C</button>
+        <button id="op" onclick="appendDisplay('/')">/</button>
+        <button id="equal" onclick="calculate()">=</button>
+        <button onclick="appendDisplay('.')">.</button>
+        <p id="chris">- Chris</p>
+      </div>
     </div>
-<script src="TOPcalc.js"></script>
-</body>
+    <script src="TOPcalc.js"></script>
+  </body>
 </html>
